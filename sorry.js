@@ -1,3 +1,3 @@
-for (i = 1; i < 100; i++) {
-  console.log({ i } + "sorry babe");
+for (i = 1; i <= 100; i++) {
+  console.log(`${i}. "sorry babe"`);
 }
