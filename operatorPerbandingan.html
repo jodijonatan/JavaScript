@@ -22,23 +22,29 @@
             }
         }
 
-        let nilaiAkhir = tentukanNilai (90, 90);
+        let nilaiAkhir = tentukanNilai (ujian = 90, absensi = 90);
+        const message = `Nilai ujian :${ujian}<br> nilai absensi: ${absensi}`;
 
         switch (nilaiAkhir) {
             case "A":
-                document.write("Kamu lulus dengan sangat baik")
+                document.write(message);
+                document.write("<br>Kamu lulus dengan sangat baik")
                 break;
             case "B":
-                document.write("Kamu lulus dengan baik")
+                document.write(message);
+                document.write("<br>Kamu lulus dengan baik")
                 break;
             case "C":
-                document.write("Kamu lulus dengan cukup baik")
+                document.write(message);
+                document.write("<br>Kamu lulus dengan cukup baik")
                 break;
             case "D":
-                document.write("Kamu lulus dengan kurang baik")
+                document.write(message);
+                document.write("<br>Kamu lulus dengan kurang baik")
                 break;
             case "E":
-                document.write("Kamu tidak lulus")
+                document.write(message);
+                document.write("<br>Kamu tidak lulus")
             break;
         }
 
