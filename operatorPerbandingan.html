@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function tentukanNilai (ujian, absensi) {
+            if (ujian >= 90 && absensi >= 90) {
+                return nilai = "A";
+            } else if (ujian >= 80 && absensi >= 80) {
+                return nilai = "B";
+            } else if (ujian >= 70 && absensi >= 70) {
+                return nilai = "C";
+            } else if (ujian >= 60 && absensi >= 60) {
+                return nilai = "D";
+            } else {
+                return nilai = "E";
+            }
+        }
+
+        let nilaiAkhir = tentukanNilai (90, 90);
+
+        switch (nilaiAkhir) {
+            case "A":
+                document.write("Kamu lulus dengan sangat baik")
+                break;
+            case "B":
+                document.write("Kamu lulus dengan baik")
+                break;
+            case "C":
+                document.write("Kamu lulus dengan cukup baik")
+                break;
+            case "D":
+                document.write("Kamu lulus dengan kurang baik")
+                break;
+            case "E":
+                document.write("Kamu tidak lulus")
+            break;
+        }
+
+    </script>
+</body>
+</html>
