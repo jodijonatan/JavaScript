@@ -7,47 +7,49 @@
 </head>
 <body>
     <script>
+        let nilaiAkhir;
 
-        function tentukanNilai (ujian, absensi) {
+        function getNilaiAkhit (ujian, absensi) {
             if (ujian >= 90 && absensi >= 90) {
-                return nilai = "A";
+                return nilaiAkhir = "A";
             } else if (ujian >= 80 && absensi >= 80) {
-                return nilai = "B";
+                return nilaiAkhir = "B";
             } else if (ujian >= 70 && absensi >= 70) {
-                return nilai = "C";
+                return nilaiAkhir = "C";
             } else if (ujian >= 60 && absensi >= 60) {
-                return nilai = "D";
+                return nilaiAkhir = "D";
+            } else if (ujian >= 50 && absensi >= 50) {
+                return nilaiAkhir = "E";
             } else {
-                return nilai = "E";
+                document.writeln("Maukkan input yang valid!");
             }
         }
 
-        let nilaiAkhir = tentukanNilai (ujian = 90, absensi = 90);
-        const message = `Nilai ujian :${ujian}<br> nilai absensi: ${absensi}`;
+        getNilaiAkhit(ujian = 91, absensi = 100);
+        let message = `Nilai ujian : ${ujian} <br> Nilai absensi : ${absensi} </br>`;
 
         switch (nilaiAkhir) {
             case "A":
-                document.write(message);
-                document.write("<br>Kamu lulus dengan sangat baik")
+                document.writeln(message);
+                document.writeln("Lulus dengan sangat baik");
                 break;
             case "B":
-                document.write(message);
-                document.write("<br>Kamu lulus dengan baik")
+                document.writeln(message);
+                document.writeln("Lulus dengan baik");
                 break;
             case "C":
-                document.write(message);
-                document.write("<br>Kamu lulus dengan cukup baik")
+                document.writeln(message);
+                document.writeln("Lulus dengan cukup baik");
                 break;
             case "D":
-                document.write(message);
-                document.write("<br>Kamu lulus dengan kurang baik")
+                document.writeln(message);
+                document.writeln("Lulus dengan kurang baik");
                 break;
             case "E":
-                document.write(message);
-                document.write("<br>Kamu tidak lulus")
-            break;
+                document.writeln(message);
+                document.writeln("Tidak lulus");
+                break;
         }
-
     </script>
 </body>
 </html>
