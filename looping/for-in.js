@@ -4,6 +4,6 @@ const person = {
   lastName: "Karo karo",
 };
 
-for (const property in person) {
-  console.log(`${property} : ${person[property]}`);
+for (const key in person) {
+  console.log(`${key} : ${person[key]}`);
 }
