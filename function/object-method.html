@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        userName: ``,
+        userAge: ``,
+        askForName: function () {
+          this.userName = prompt("Whats your name?");
+          document.writeln(`<p>Your name : ${this.userName}</p>`);
+        },
+        askForAge: function () {
+          this.userAge = prompt("How old are you?");
+          document.writeln(`<p>Your age : ${this.userAge}</p>`);
+        },
+      };
+      person.askForName();
+      person.askForAge();
+    </script>
+  </body>
+</html>
