@@ -1,3 +1,4 @@
+// with statement sebenarnya tidak direkomendasikan
 const person = {
   firstName: "Jodi",
   middleName: "Jonatan",
