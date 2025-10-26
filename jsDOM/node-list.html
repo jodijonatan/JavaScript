@@ -1,0 +1,27 @@
+<!-- nodelist adalah kumpulan dari beberapa node yang diambil dari DOM NodeList mirip
+dengan array, namun tidak memiliki semua metode array NodeList dapat diakses
+dengan indeks, seperti array -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li id="first">First</li>
+      <li id="second">Second</li>
+      <li id="third">Third</li>
+    </ul>
+
+    <script>
+      const lists = document.querySelectorAll("li");
+
+      for (list of lists) {
+        console.log(list);
+      }
+    </script>
+  </body>
+</html>

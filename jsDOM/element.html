@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Element</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="title"></h1>
+      <p id="description"></p>
+      <p id="remove">ini akan dihapus</p>
+    </div>
+
+    <div id="content"></div>
+
+    <script>
+      const title = document.getElementById("title");
+      title.textContent = "Ini adalah judul";
+
+      const description = document.getElementById("description");
+      description.textContent = "Ini adalah deskripsi dari elemen ini.";
+
+      document.getElementById("remove").remove();
+
+      const content = document.getElementById("content");
+
+      const judul = document.createElement("h2");
+      judul.textContent = "Ini adalah judul baru";
+      content.appendChild(judul);
+
+      const paragraf = document.createElement("p");
+      paragraf.textContent = "Ini adalah paragraf baru";
+      content.appendChild(paragraf);
+    </script>
+  </body>
+</html>

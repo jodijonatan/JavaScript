@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="commentForm">
+      <label for="comment">
+        Comment: <input type="text" id="comment" name="comment" />
+      </label>
+      <br />
+      <label for="from">
+        From: <input type="text" id="from" name="from" />
+      </label>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+    <div id="commentList"></div>
+
+    <script>
+      document.forms["commentForm"].onsubmit = function (event) {
+        const commentList = document.getElementById("commentList");
+        const comment = document.forms["commentForm"]["comment"].value;
+        const from = document.forms["commentForm"]["from"].value;
+
+        if (!comment || !from) {
+          alert("Isi anjeng!");
+          event.preventDefault();
+          return;
+        }
+
+        const commentItem = document.createElement("div");
+        commentItem.textContent = `${comment} - ${from}`;
+        commentList.appendChild(commentItem);
+
+        document.forms["commentForm"].reset();
+
+        event.preventDefault();
+      };
+    </script>
+  </body>
+</html>

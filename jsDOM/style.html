@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="green" />
+    <input type="button" value="yellow" />
+    <input type="button" value="red" />
+
+    <input type="button" value="mini" />
+    <input type="button" value="big" />
+
+    <div
+      id="canvas"
+      style="width: 300px; height: 300px; background-color: black"
+    ></div>
+
+    <script>
+      const canvas = document.getElementById("canvas");
+      const colors = document.querySelectorAll("input");
+
+      for (const color of colors) {
+        color.addEventListener("click", () => {
+          canvas.style.backgroundColor = color.value;
+        });
+      }
+
+      const miniButton = document.querySelector("input[value='mini']");
+      miniButton.addEventListener("click", () => {
+        canvas.style.width = "100px";
+        canvas.style.height = "100px";
+      });
+
+      const bigButton = document.querySelector("input[value='big']");
+      bigButton.addEventListener("click", () => {
+        canvas.style.width = "500px";
+        canvas.style.height = "500px";
+      });
+    </script>
+  </body>
+</html>

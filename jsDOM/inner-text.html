@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="content" style="font-size: 20px; color: red">
+      <script>
+        console.log("Hello, World!");
+      </script>
+      <b>Jodi</b> Jonatan <i>Karo karo</i>
+    </p>
+
+    <script>
+      const content = document.getElementById("content");
+
+      console.log("ini textContent: ", content.textContent);
+      console.log("ini innerText: ", content.innerText);
+      console.log("ini innerHTML: ", content.innerHTML);
+    </script>
+  </body>
+</html>

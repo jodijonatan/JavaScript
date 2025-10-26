@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Module</title>
+  </head>
+  <body>
+    <script type="module">
+      import { sayHello, sayGoodbye } from "./scripts/say.js";
+      import Person from "./scripts/Person.js";
+      import {
+        company as perusahaan,
+        sayCompany as sayPerusahaan,
+        Employee as Pegawai,
+      } from "./scripts/multiple.js";
+
+      sayHello("Alice");
+      sayGoodbye("Bob");
+
+      const Jodi = new Person("Jodi");
+      Jodi.hello("Jonatan");
+
+      console.log(perusahaan);
+      sayPerusahaan();
+      const Jonatan = new Pegawai("Jonatan");
+      Jonatan.introduce();
+    </script>
+  </body>
+</html>
